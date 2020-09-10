@@ -7,7 +7,7 @@ namespace DataFormation
     public interface IFormation<T>
     {
 
-        IEnumerable<Formation> Formations(IEnumerable<T> itemFormation);
+        IEnumerable<Formation> Formations(IEnumerable<T> itemFormation,String nameFormation);
 
     }
 }

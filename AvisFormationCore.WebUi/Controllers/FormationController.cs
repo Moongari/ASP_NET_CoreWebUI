@@ -32,7 +32,7 @@ namespace AvisFormationCore.WebUi.Controllers
         }
         
 
-        public IActionResult FormationJava()
+        public IActionResult QuelFormation(String nameFormation)
         {
 
             Formation java = new Formation() { Nom = "JAVA", NomSeo = "Oracle", Description = "Design Pattern SOLID c'est la classe " };
@@ -40,8 +40,9 @@ namespace AvisFormationCore.WebUi.Controllers
 
             Formation[] listFormation = { java, php };
 
-            FormationJava javaPages = new FormationJava();
-            var infoJava = javaPages.Formations(listFormation).ToList();
+            ChooseTraining javaPages = new ChooseTraining();
+
+            var infoJava = javaPages.Formations(listFormation,javaPages.NameFormation= nameFormation).ToList();
             return View(infoJava);
         }
 
