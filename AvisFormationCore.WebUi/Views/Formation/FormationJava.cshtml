@@ -1,0 +1,17 @@
+﻿@model IEnumerable<DataFormation.Formation>
+@{
+    ViewData["Title"] = "FormationJava";
+}
+
+
+
+
+@foreach (var item in Model)
+{
+    <h1>Vous avez choisi la Formation  : <p><b>@item.Nom</b></p> </h1>
+   
+    <p><b>@item.Description</b></p>
+    <p><b>@item.NomSeo</b></p>
+}
+
+
